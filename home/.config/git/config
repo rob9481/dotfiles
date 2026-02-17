@@ -1,0 +1,69 @@
+# vim:set ft=gitconfig:
+
+[alias]
+  alias = "config --get-regexp alias"
+  amend = "commit --allow-empty --allow-empty-message --amend -C HEAD"
+  bv = "branch -vv"
+  cb = "checkout -b"
+  cm = "commit -m"
+  co = "checkout"
+  df = "diff"
+  dfs = "diff --staged"
+  dt = "difftool"
+  dts = "difftool --staged"
+  fa = "fetch -a"
+  lg = "log --date=short --pretty=format:'%Cgreen%h %Cblue%cd (%cr) %Cred%an%C(yellow)%d%Creset ==> %s'"
+  lgg = "log --date=short --pretty=format:'%Cgreen%h %Cblue%cd (%cr) %Cred%an%C(yellow)%d%Creset ==> %s' --graph"
+  st = "status -bsu"
+
+[blame]
+  #ignoreRevsFile = ".git-blame-ignore-revs"
+  markIgnoredLines = true
+  markUnblamableLines = true
+
+[color]
+  ui = "auto"
+
+[commit]
+  verbose = true
+
+[core]
+  precomposeUnicode = true
+  preloadindex = true
+
+[credential]
+  helper = "cache"
+
+[diff]
+  algorithm = "histogram"
+
+[filter "lfs"]
+  clean = "git-lfs clean -- %f"
+  process = "git-lfs filter-process"
+  required = true
+  smudge = "git-lfs smudge -- %f"
+
+[grep]
+  extendedRegexp = true
+  lineNumber = true
+
+[init]
+  defaultBranch = "main"
+
+[merge]
+  conflictstyle = "zdiff3"
+
+[pull]
+  ff = "only"
+
+[push]
+  default = "current"
+
+[rebase]
+  autosquash = true
+
+[rerere]
+  enable = true
+
+[include]
+  path = user.inc
