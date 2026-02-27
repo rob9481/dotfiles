@@ -1,0 +1,32 @@
+[alias]
+add-p=record
+lg=log --template "{node | short} {label('custom.title', desc | firstline)}\n             [{date | age}, {author | person} ({branch}{if(bookmarks, ', {bookmarks}')})]\n"
+rebase-i=histedit
+
+[color]
+custom.title=blue
+
+[defaults]
+commit=-v
+
+[diff]
+git=1
+showfunc=1
+unified=3
+
+[extdiff]
+cmd.vf=vimdiff
+
+[extensions]
+color=
+hgext.extdiff=
+histedit=
+progress=
+rebase=
+transplant=
+
+[pager]
+attend=annotate, blame, diff, grep, help, log, lg
+
+[ui]
+username=Robert Buonpastore <247273281+rob9481@users.noreply.github.com>
