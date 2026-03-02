@@ -40,6 +40,14 @@ return {
     "inkarkat/vim-visualrepeat"
   },
   {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        clojure_lsp = {},
+      },
+    },
+  },
+  {
     "saghen/blink.cmp",
     opts = {
       cmdline = { enabled = false },
