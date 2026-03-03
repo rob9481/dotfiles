@@ -40,9 +40,19 @@ return {
     "inkarkat/vim-visualrepeat"
   },
   {
+    "mason-org/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "ada-language-server",
+        "perlnavigator",
+      },
+    },
+  },
+  {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        ada_ls = {},
         clojure_lsp = {},
       },
       inlay_hints = {
