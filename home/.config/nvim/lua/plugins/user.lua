@@ -45,6 +45,9 @@ return {
       servers = {
         clojure_lsp = {},
       },
+      inlay_hints = {
+        enabled = false,
+      },
     },
   },
   {

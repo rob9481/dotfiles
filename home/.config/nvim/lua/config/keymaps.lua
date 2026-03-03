@@ -18,9 +18,3 @@ end, { desc = "Toggle Diagnostics (text)" })
 vim.keymap.set("n", "<leader>bp", function()
   print(vim.api.nvim_buf_get_name(0))
 end, { desc = "Print buffer name" })
-
-local inlay_hints = true
-vim.keymap.set("n", "<leader>uH", function()
-  inlay_hints = not inlay_hints
-  vim.lsp.inlay_hint.enable(inlay_hints, nil)
-end, { desc = "Disable inlay hints (global)" })
