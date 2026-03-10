@@ -61,6 +61,12 @@ return {
     },
   },
   {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = { "all" },
+    },
+  },
+  {
     "saghen/blink.cmp",
     opts = {
       cmdline = { enabled = false },
